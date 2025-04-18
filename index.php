@@ -31,12 +31,12 @@
 // $array = array('apple', 'banana', 12);
 
 
-// var_dump($name);
-// var_dump($age);
-// var_dump($float);
-// var_dump($bool);
-// var_dump($null);
-// var_dump($array);
+var_dump($name);
+var_dump($age);
+var_dump($float);
+var_dump($bool);
+var_dump($null);
+var_dump($array);
 
 
 ?>
