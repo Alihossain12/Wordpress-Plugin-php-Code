@@ -28,7 +28,7 @@
 // $float = 30.3;
 // $bool = true;
 // $null = null;
-// $array = array('apple', 'banana', 12);
+// $array = ['apple', 'banana', 12];
 
 
 // var_dump($name);
@@ -39,11 +39,24 @@
 // var_dump($array);
 
 
-$name = "Ali Hossain";
-$age = 23;
+// $name = "Ali Hossain";
+// $age = 23;
 
-printf("My name is %s and I am %d years old.", $name, $age);
 // printf("My name is %s and I am %d years old.", $name, $age);
+// // printf("My name is %s and I am %d years old.", $name, $age);
+
+
+
+// $students = ["Ali", "Rahim", "Karim", "Sakib", "Rafiq"];
+// var_dump($students);
+
+class student {
+    public $name = 'Ali Hossain';
+
+}
+
+$student = new student();
+echo $student->name;
 
 
 ?>
