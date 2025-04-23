@@ -46,6 +46,7 @@
 // // printf("My name is %s and I am %d years old.", $name, $age);
 
 
+// --------------------------------
 
 // $students = ["Ali", "Rahim", "Karim", "Sakib", "Rafiq"];
 // var_dump($students);
@@ -62,7 +63,7 @@
 
 
 
-// logical opearetor
+// logical opearetor-----------------------
 
 
 //AND
@@ -70,7 +71,7 @@
 //NOT
 //XOR
 
-//AND oparetor
+//AND oparetor---------------
 
 // $num1 = 100;
 // $num2 = 20;
@@ -84,7 +85,7 @@
 // var_dump($condition1 && $condition2);
 
 
-//OR
+//OR---------------
 
 /*
 $num1 = 100;
@@ -98,12 +99,12 @@ $condition2 = $num1 > $num3;
 
 var_dump($condition1 || $condition2);  */
 
-// NOT oparetor
+// NOT oparetor----------------
 
 // var_dump(!true);
 
 
-// XOR oparetor
+// XOR oparetor---------------
 
 /*
 $num1 = 100;
@@ -118,8 +119,70 @@ $condition2 = $num1 > $num3;
 var_dump($condition1 xor $condition2);  */
 
 
-// Tarnary oparetor
+// Tarnary oparetor------------------
 
-echo $status == 1  ? "Active" : "Deactive";
+// echo $status == 1  ? "Active" : "Deactive";
+
+
+
+/*
+------------------------------
+$status = 1;
+
+$number = 1;
+switch ($status) {
+    case 0:
+        echo"Pending";
+        break; 
+        case1:
+            echo "Accepted";
+            break;
+        case 2:
+            echo "Rejected";
+            break;
+        default:
+            echo "Unknown status";
+        } 
+
+
+ 
+*/
+
+
+
+// $password = '12345678';
+
+// if (preg_match ('/[a-zA-Z0-9]/', $password) && preg_match ('/[0-9]/', $password) )  {
+//     if (preg_match ('/[@$#%*]/', $password)) {
+//         echo' strong password';
+//     } else {
+//         echo 'medium password'; 
+// }
+// } else{
+//     echo 'week password';
+// }
+
+//   //Loops-----------------------
+
+//   for ($i = 0; $i < 10; $i--) {
+    
+// }
+
+
+
+// logic bult korar jonne--------------------
+
+
+
+    $for = 6;
+    $fact_result = 1;
+    for ($i = 1; $i <= $for; $i++) {
+        $fact_result *= $i;
+    }
+    echo $fact_result; 
+
+
+
+
 
 ?>
