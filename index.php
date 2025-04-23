@@ -50,13 +50,76 @@
 // $students = ["Ali", "Rahim", "Karim", "Sakib", "Rafiq"];
 // var_dump($students);
 
-class student {
-    public $name = 'Ali Hossain';
+// class student {
+//     public $name = 'Ali Hossain';
 
-}
+// }
 
-$student = new student();
-echo $student->name;
+// $student = new student();
+// echo $student->name;
 
+
+
+
+
+// logical opearetor
+
+
+//AND
+//OR
+//NOT
+//XOR
+
+//AND oparetor
+
+// $num1 = 100;
+// $num2 = 20;
+// $num3 = 30;
+
+// $condition = $num1 > $num2;
+// $condition2 = $num1 > $num3;
+
+
+
+// var_dump($condition1 && $condition2);
+
+
+//OR
+
+/*
+$num1 = 100;
+$num2 = 20;
+$num3 = 30;
+
+$condition = $num1 > $num2;
+$condition2 = $num1 > $num3;
+
+
+
+var_dump($condition1 || $condition2);  */
+
+// NOT oparetor
+
+// var_dump(!true);
+
+
+// XOR oparetor
+
+/*
+$num1 = 100;
+$num2 = 200;
+$num3 = 300;
+
+$condition = $num1 > $num2;
+$condition2 = $num1 > $num3;
+
+
+
+var_dump($condition1 xor $condition2);  */
+
+
+// Tarnary oparetor
+
+echo $status == 1  ? "Active" : "Deactive";
 
 ?>
