@@ -204,27 +204,39 @@ switch ($status) {
 
 
     //Index array------------------
-    $array = array(1,2,3,4,5);
+    // $array = array(1,2,3,4,5);
 
-    foreach ($array as $key => $value) {
-        echo "Key: $key, Value: $value\n";
+    // foreach ($array as $key => $value) {
+    //     echo "Key: $key, Value: $value\n";
+    // }
+
+    // //Associative array------------------
+    // $array = array(
+    //     'name' => 'Ali Hossain',
+    //     'age' => 23,
+    //     'address' => 'Dhaka, Bangladesh'
+    // );
+
+
+    // //Multidimensional array------------------
+    //   $array = array( 
+    //     array(1,2,3),
+    //     array(4,5,6),
+    //     array(7,8,9)
+    //     );
+
+//------------------------------------------------------------------------
+    // foreach ($array as $key => $value) {
+    //     echo "Key: $key, Value: $value\n";
+    $students = [
+        ['name' => 'Ali', 'age' => 23],
+        ['name' => 'Rahim', 'age' => 25],
+        ['name' => 'Karim', 'age' => 22]
+    ];
+    foreach ($students as $student) {
+        echo "Name: " . $student['name'] . ", Age: " . $student['age'] . "\n";
     }
-
-    //Associative array------------------
-    $array = array(
-        'name' => 'Ali Hossain',
-        'age' => 23,
-        'address' => 'Dhaka, Bangladesh'
-    );
-
-
-    //Multidimensional array------------------
-      $array = array( 
-        array(1,2,3),
-        array(4,5,6),
-        array(7,8,9)
-        );
-
+    
 
 
 ?>
