@@ -174,14 +174,56 @@ switch ($status) {
 
 
 
-    $for = 6;
-    $fact_result = 1;
-    for ($i = 1; $i <= $for; $i++) {
-        $fact_result *= $i;
+    // $for = 6;
+    // $fact_result = 1;
+    // for ($i = 1; $i <= $for; $i++) {
+    //     $fact_result *= $i;
+    // }
+    // echo $fact_result; 
+
+
+
+
+
+   // for loop------------------
+
+    // $row = 4;
+    // for ($i = 1; $i <= $row; $i++) {
+    //     for ($j = 1; $j <= $i; $j++) {
+    //         echo "*";
+    //     }
+    //     echo "\n";
+    // }
+
+
+
+    // Array-----------------------
+
+    // $array = [1,2,3,4,5];
+    // $array = array(1,2,3,4,5);
+
+
+    //Index array------------------
+    $array = array(1,2,3,4,5);
+
+    foreach ($array as $key => $value) {
+        echo "Key: $key, Value: $value\n";
     }
-    echo $fact_result; 
+
+    //Associative array------------------
+    $array = array(
+        'name' => 'Ali Hossain',
+        'age' => 23,
+        'address' => 'Dhaka, Bangladesh'
+    );
 
 
+    //Multidimensional array------------------
+      $array = array( 
+        array(1,2,3),
+        array(4,5,6),
+        array(7,8,9)
+        );
 
 
 
