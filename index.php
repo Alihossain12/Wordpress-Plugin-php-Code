@@ -226,8 +226,10 @@ switch ($status) {
     //     );
 
 //------------------------------------------------------------------------
-    // foreach ($array as $key => $value) {
-    //     echo "Key: $key, Value: $value\n";
+
+
+
+
     $students = [
         ['name' => 'Ali', 'age' => 23],
         ['name' => 'Rahim', 'age' => 25],
