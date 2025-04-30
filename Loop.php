@@ -65,5 +65,9 @@ foreach ($associativeArray as $key => $value) {
     echo "<br>";
 }
 
-
+ $foreachArray = ["Ali", "Hossain", "Sakib", "Riyad", "Shakib"];
+ foreach ($foreachArray as $key => $value) {
+     echo "Key: $key, Value: $value";
+     echo "<br>";
+ }
 ?>
