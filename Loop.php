@@ -79,6 +79,10 @@ $students = array(
   'age' => [20, 21, 22],
   'city' => ['Dhaka', 'Chittagong', 'Khulna'],
   'country' => ['Bangladesh', 'India', 'Pakistan'],
+  'id' => [1, 2, 3],
+  'email' => ['ali@.com', 'farhan@.com', 'naim@.com'],
+  'phone' => ['01700000000', '01800000000', '01900000000'],
+  'postcode' => ['1212', '1213', '1214'],
 );
 
 foreach ($students['name'] as $index => $name) {
@@ -94,9 +98,16 @@ foreach ($students['name'] as $index => $name) {
   echo "<br>";
   echo "Country: " . $students['country'][$index];
   echo "<br>";
+  echo "ID: " . $students['id'][$index];
+  echo "<br>";
+  echo "Email: " . $students['email'][$index];
+  echo "<br>";
+  echo "Phone: " . $students['phone'][$index];
+  echo "<br>";
+  echo "Postcode: " . $students['postcode'][$index];
+  echo "<br>";
   echo "<hr>";
 }
-
 
 
 ?>
