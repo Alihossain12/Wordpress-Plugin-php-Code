@@ -3,21 +3,21 @@
 
 // Indexed Array (Numerical Keys) --------------------------------
 
-// $indexedArray = ["Ali", "Naim", "Sakib", "Riyad", "Farhan", 'Rakib'];
-// echo $indexedArray[0] . "<br>";
-// echo $indexedArray[1] . "<br>";
-// echo $indexedArray[2] . "<br>";
-// echo $indexedArray[3] . "<br>";
-// echo $indexedArray[4] . "<br>";
-// echo $indexedArray[5] . "<br>";
+$indexedArray = ["Ali", "Naim", "Sakib", "Riyad", "Farhan", 'Rakib'];
+echo $indexedArray[0] . "<br>";
+echo $indexedArray[1] . "<br>";
+echo $indexedArray[2] . "<br>";
+echo $indexedArray[3] . "<br>";
+echo $indexedArray[4] . "<br>";
+echo $indexedArray[5] . "<br>";
 
 
-// $indexedArray = [ "100","90","80","70","60"];
-// echo $indexedArray[0] . "<br>";
-// echo $indexedArray[1] . "<br>";
-// echo $indexedArray[2] . "<br>";
-// echo $indexedArray[3] . "<br>";
-// echo $indexedArray[4] . "<br>";
+$indexedArray = [ "100","90","80","70","60"];
+echo $indexedArray[0] . "<br>";
+echo $indexedArray[1] . "<br>";
+echo $indexedArray[2] . "<br>";
+echo $indexedArray[3] . "<br>";
+echo $indexedArray[4] . "<br>";
 
 
 
@@ -26,32 +26,26 @@
 
 // Associative Array (Named Keys) ---------------------------------
 
-// $associativeArray = [
-//     "name" => "Ali Hossain",
-//     "age" => 20,
-//     "city" => "Dhaka",
-//     "country" => "Bangladesh",
-//     "email" => "ali@.com",
-//     "phone" => "01700000000",
-//     "postcode" => "1212",
-// ];
+$associativeArray = [
+    "name" => "Ali Hossain",
+    "age" => 20,
+    "city" => "Dhaka",
+    "country" => "Bangladesh",
+    "email" => "ali@.com",
+    "phone" => "01700000000",
+    "postcode" => "1212",
+];
 
-//   echo $associativeArray["name"] . "<br>";
-//   echo $associativeArray["age"] . "<br>";
-//   echo $associativeArray["city"] . "<br>";
-//   echo $associativeArray["country"] . "<br>";
-//   echo $associativeArray["email"] . "<br>";
-//   echo $associativeArray["phone"] . "<br>";
-//   echo $associativeArray["postcode"] . "<br>";
-//   echo "<hr>";
+  echo $associativeArray["name"] . "<br>";
+  echo $associativeArray["age"] . "<br>";
+  echo $associativeArray["city"] . "<br>";
+  echo $associativeArray["country"] . "<br>";
+  echo $associativeArray["email"] . "<br>";
+  echo $associativeArray["phone"] . "<br>";
+  echo $associativeArray["postcode"] . "<br>";
+  echo "<hr>";
 
 
-// $associativeArray = [ "name" => "Farhan", "age" => 20, "city" => "Dhaka", "country" => "Bangladesh" ];
-
-//   echo $associativeArray["name"] . "<br>";
-//   echo $associativeArray["age"] . "<br>";   
-//   echo $associativeArray["city"] . "<br>";
-//   echo $associativeArray["country"] . "<br>";
 
 
 
