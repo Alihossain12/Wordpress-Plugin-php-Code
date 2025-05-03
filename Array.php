@@ -3,21 +3,21 @@
 
 // Indexed Array (Numerical Keys) --------------------------------
 
-$indexedArray = ["Ali", "Naim", "Sakib", "Riyad", "Farhan", 'Rakib'];
-echo $indexedArray[0] . "<br>";
-echo $indexedArray[1] . "<br>";
-echo $indexedArray[2] . "<br>";
-echo $indexedArray[3] . "<br>";
-echo $indexedArray[4] . "<br>";
-echo $indexedArray[5] . "<br>";
+// $indexedArray = ["Ali", "Naim", "Sakib", "Riyad", "Farhan", 'Rakib'];
+// echo $indexedArray[0] . "<br>";
+// echo $indexedArray[1] . "<br>";
+// echo $indexedArray[2] . "<br>";
+// echo $indexedArray[3] . "<br>";
+// echo $indexedArray[4] . "<br>";
+// echo $indexedArray[5] . "<br>";
 
 
-$indexedArray = [ "100","90","80","70","60"];
-echo $indexedArray[0] . "<br>";
-echo $indexedArray[1] . "<br>";
-echo $indexedArray[2] . "<br>";
-echo $indexedArray[3] . "<br>";
-echo $indexedArray[4] . "<br>";
+// $indexedArray = [ "100","90","80","70","60"];
+// echo $indexedArray[0] . "<br>";
+// echo $indexedArray[1] . "<br>";
+// echo $indexedArray[2] . "<br>";
+// echo $indexedArray[3] . "<br>";
+// echo $indexedArray[4] . "<br>";
 
 
 
@@ -26,32 +26,32 @@ echo $indexedArray[4] . "<br>";
 
 // Associative Array (Named Keys) ---------------------------------
 
-$associativeArray = [
-    "name" => "Ali Hossain",
-    "age" => 20,
-    "city" => "Dhaka",
-    "country" => "Bangladesh",
-    "email" => "ali@.com",
-    "phone" => "01700000000",
-    "postcode" => "1212",
-];
+// $associativeArray = [
+//     "name" => "Ali Hossain",
+//     "age" => 20,
+//     "city" => "Dhaka",
+//     "country" => "Bangladesh",
+//     "email" => "ali@.com",
+//     "phone" => "01700000000",
+//     "postcode" => "1212",
+// ];
 
-  echo $associativeArray["name"] . "<br>";
-  echo $associativeArray["age"] . "<br>";
-  echo $associativeArray["city"] . "<br>";
-  echo $associativeArray["country"] . "<br>";
-  echo $associativeArray["email"] . "<br>";
-  echo $associativeArray["phone"] . "<br>";
-  echo $associativeArray["postcode"] . "<br>";
-  echo "<hr>";
+//   echo $associativeArray["name"] . "<br>";
+//   echo $associativeArray["age"] . "<br>";
+//   echo $associativeArray["city"] . "<br>";
+//   echo $associativeArray["country"] . "<br>";
+//   echo $associativeArray["email"] . "<br>";
+//   echo $associativeArray["phone"] . "<br>";
+//   echo $associativeArray["postcode"] . "<br>";
+//   echo "<hr>";
 
 
-$associativeArray = [ "name" => "Farhan", "age" => 20, "city" => "Dhaka", "country" => "Bangladesh" ];
+// $associativeArray = [ "name" => "Farhan", "age" => 20, "city" => "Dhaka", "country" => "Bangladesh" ];
 
-  echo $associativeArray["name"] . "<br>";
-  echo $associativeArray["age"] . "<br>";   
-  echo $associativeArray["city"] . "<br>";
-  echo $associativeArray["country"] . "<br>";
+//   echo $associativeArray["name"] . "<br>";
+//   echo $associativeArray["age"] . "<br>";   
+//   echo $associativeArray["city"] . "<br>";
+//   echo $associativeArray["country"] . "<br>";
 
 
 
@@ -61,6 +61,65 @@ $associativeArray = [ "name" => "Farhan", "age" => 20, "city" => "Dhaka", "count
 
 
 // Multidimensional Array (Arrays within Arrays) ------------------
+
+
+ $students = array(
+    'name' => ['Ali Hossain', 'Farhan', 'Naim'],
+    'roll' => [21, 22, 23],
+    'age' => [20, 21, 22],
+    'city' => ['Dhaka', 'Chittagong', 'Khulna'],
+    'country' => ['Bangladesh', 'Bangladesh', 'Bangladesh'],
+    'id' => [1, 2, 3],
+    'email' => ['ali@.com', 'farhan@.com', 'naim@.com'],
+    'phone' => ['01700000000', '01800000000', '01900000000'],
+    'postcode' => ['1212', '1213', '1214'],
+);
+ 
+ ?>
+
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Postcode</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    <?php if( is_array( $students ) ) : ?>
+        <?php foreach ($students['name'] as $index => $name) : ?>
+            <tr>
+                <td><?php echo $name; ?></td>
+                <td><?php echo $students['age'][$index]; ?></td>
+                <td><?php echo $students['city'][$index]; ?></td>
+                <td><?php echo $students['country'][$index]; ?></td>
+                <td><?php echo $students['id'][$index]; ?></td>
+                <td><?php echo $students['email'][$index]; ?></td>
+                <td><?php echo $students['phone'][$index]; ?></td>
+                <td><?php echo $students['postcode'][$index]; ?></td>
+            </tr>
+        <?php endforeach; ?>
+
+        <?php endif ?>
+    </tbody>
+</table>
+
+
+<br>
+<br>
+<br>
+
+
+
+
+<?php 
+
 
 
 $students = array(
@@ -73,17 +132,24 @@ $students = array(
     'email' => ['ali@.com', 'farhan@.com', 'naim@.com'],
     'phone' => ['01700000000', '01800000000', '01900000000'],
     'postcode' => ['1212', '1213', '1214'],
-);
+); 
+
+
+
 // Ali Hossain details ------------------------
 
-echo "My name is: " . $students['name'][0] . "<br>" . "<hr>";
-echo "Roll: " . $students['roll'][0] . "<br>" . "<hr>";
-echo "City: " . $students['city'][0] . "<br>" . "<hr>";
-echo "Country: " . $students['country'][0] . "<br>" . "<hr>";
-echo "ID: " . $students['id'][0] . "<br>" . "<hr>";
-echo "Email: " . $students['email'][0] . "<br>" . "<hr>";
-echo "Phone: " . $students['phone'][0] . "<br>" . "<hr>";
-echo "Postcode: " . $students['postcode'][0] . "<br>" . "<hr>";
+ echo "My name is: " . $students['name'][0] . "<br>" . "<hr>";
+ echo "Roll: " . $students['roll'][0] . "<br>" . "<hr>";
+ echo "City: " . $students['city'][0] . "<br>" . "<hr>";
+ echo "Country: " . $students['country'][0] . "<br>" . "<hr>";
+ echo "ID: " . $students['id'][0] . "<br>" . "<hr>";
+ echo "Email: " . $students['email'][0] . "<br>" . "<hr>";
+ echo "Phone: " . $students['phone'][0] . "<br>" . "<hr>";
+ echo "Postcode: " . $students['postcode'][0] . "<br>" . "<hr>";
+
+
+
+
 
 
 // Farhan details ------------------------
@@ -108,6 +174,8 @@ echo "ID: " . $students['id'][2] . "<br>" . "<hr>";
 echo "Email: " . $students['email'][2] . "<br>" . "<hr>";
 echo "Phone: " . $students['phone'][2] . "<br>" . "<hr>";
 echo "Postcode: " . $students['postcode'][2] . "<br>" . "<hr>";
+
+
 
  
 
@@ -269,17 +337,17 @@ echo "{$students['postcode'][0]}<br><hr>";
 
 //Accessing Elements---------------------------------------
 
-echo $students['name'][0] . "<br>"; // outputs "Ali Hossain"
-echo $students['roll'][1] . "<br>"; // outputs "22"
-echo $students['city'][2] . "<br>"; // outputs "Khulna"
+// echo $students['name'][0] . "<br>"; // outputs "Ali Hossain"
+// echo $students['roll'][1] . "<br>"; // outputs "22"
+// echo $students['city'][2] . "<br>"; // outputs "Khulna"
 
 
 
-if (isset($students['name'][3])) {
-    echo $students['name'][3];
-} else {
-    echo "Index does not exist";
-}
+// if (isset($students['name'][3])) {
+//     echo $students['name'][3];
+// } else {
+//     echo "Index does not exist";
+// }
 
 
 
@@ -287,14 +355,14 @@ if (isset($students['name'][3])) {
 
 // Modifying Elements--------------------------------
 
-$students['name'][0] = 'John Doe';
-echo $students['name'][0]; // outputs "John Doe"
+// $students['name'][0] = 'John Doe';
+// echo $students['name'][0]; // outputs "John Doe"
 
-$students['roll'][1] = 25;
-echo $students['roll'][1]; // outputs "25"
+// $students['roll'][1] = 25;
+// echo $students['roll'][1]; // outputs "25"
 
-$students['city'][2] = 'New York';
-echo $students['city'][2]; // outputs "New York"
+// $students['city'][2] = 'New York';
+// echo $students['city'][2]; // outputs "New York"
 
 
 
@@ -302,84 +370,84 @@ echo $students['city'][2]; // outputs "New York"
 
 // Adding Elements----------------------------------
 
-$students['name'][] = 'Jane Doe';
-echo $students['name'][3]; // outputs "Jane Doe"
+// $students['name'][] = 'Jane Doe';
+// echo $students['name'][3]; // outputs "Jane Doe"
 
-$students['roll'][] = 26;
-echo $students['roll'][3]; // outputs "26"
+// $students['roll'][] = 26;
+// echo $students['roll'][3]; // outputs "26"
 
-$students['city'][] = 'Los Angeles';
-echo $students['city'][3]; // outputs "Los Angeles"
+// $students['city'][] = 'Los Angeles';
+// echo $students['city'][3]; // outputs "Los Angeles"
 
 
 
 
 // Removing Elements----------------------------------
 
-unset($students['name'][0]);
-echo $students['name'][0]; // outputs nothing
+// unset($students['name'][0]);
+// echo $students['name'][0]; // outputs nothing
 
-unset($students['roll'][1]);
-echo $students['roll'][1]; // outputs nothing
+// unset($students['roll'][1]);
+// echo $students['roll'][1]; // outputs nothing
 
 
 
 
 // Useful Array Functions------------------
 
- $count = count($students['name']);
-  echo "Total number of students: $count<br>" . "<hr>";
-  $count = count($students['roll']); 
+//  $count = count($students['name']);
+//   echo "Total number of students: $count<br>" . "<hr>";
+//   $count = count($students['roll']); 
 
 
 
   // array_values($array)----------
 
-  $arrayValues = array_values($students['name']);
-  echo "Array Values: ";
-  print_r($arrayValues);
-  echo "<br>" . "<hr>";
+//   $arrayValues = array_values($students['name']);
+//   echo "Array Values: ";
+//   print_r($arrayValues);
+//   echo "<br>" . "<hr>";
 
 
   // array_keys($array)----------
 
-    $arrayKeys = array_keys($students['name']);
-    echo "Array Keys: ";
-    print_r($arrayKeys);
-    echo "<br>" . "<hr>";
+    // $arrayKeys = array_keys($students['name']);
+    // echo "Array Keys: ";
+    // print_r($arrayKeys);
+    // echo "<br>" . "<hr>";
 
 
     // in_array($needle, $array)----------
 
-    print_r($fruits);
-    echo "<br>" . "<hr>";
-    echo in_array("Naim", $fruits); // outputs 1
-    echo "<br>" . "<hr>";
-    echo in_array("Naim", $usingarray); // outputs 1
+    // print_r($fruits);
+    // echo "<br>" . "<hr>";
+    // echo in_array("Naim", $fruits); // outputs 1
+    // echo "<br>" . "<hr>";
+    // echo in_array("Naim", $usingarray); // outputs 1
 
 
 
     // array_key_exists($key, $array)----------
 
-        $keyExists = array_key_exists('name', $students);
-        echo "Key Exists: ";
+        // $keyExists = array_key_exists('name', $students);
+        // echo "Key Exists: ";
 
 
 // Looping through Arrays-------------------
 
 
-$foreachArray = ["Ali", "Hossain", "Sakib", "Riyad", "Shakib"];
-    foreach ($foreachArray as $key => $value) {
-        echo "Key: $key, Value: $value";
-        echo "<br>";
-    }
-    foreach ($foreachArray as $value) {
-        echo "Value: $value";
-        echo "<br>";
-    }
-    foreach ($foreachArray as $key => $value) {
-        echo "Key: $key, Value: $value";
-        echo "<br>";
-    }
+// $foreachArray = ["Ali", "Hossain", "Sakib", "Riyad", "Shakib"];
+//     foreach ($foreachArray as $key => $value) {
+//         echo "Key: $key, Value: $value";
+//         echo "<br>";
+//     }
+//     foreach ($foreachArray as $value) {
+//         echo "Value: $value";
+//         echo "<br>";
+//     }
+//     foreach ($foreachArray as $key => $value) {
+//         echo "Key: $key, Value: $value";
+//         echo "<br>";
+//     }
 
 ?>
