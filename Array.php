@@ -69,7 +69,7 @@ $associativeArray = [
     'postcode' => ['1212', '1213', '1214'],
 );
  
- ?>
+?>
 
 <table border="1" cellpadding="5" cellspacing="0">
     <thead>
@@ -376,7 +376,7 @@ echo $students['city'][3]; // outputs "Los Angeles"
 
 
 
-Removing Elements----------------------------------
+//Removing Elements----------------------------------
 
 unset($students['name'][0]);
 echo $students['name'][0]; // outputs nothing
