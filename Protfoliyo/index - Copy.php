@@ -2,22 +2,13 @@
 <html lang="en">
  
 
-    <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ali Hossain - Web Developer</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <?php include_once 'Home-page-php/head.php';?>
 
-  </head>
-  
   <body>
     <!-- Header -->
-        <header id="header">
+        
+          
       <div class="container">
         <nav>
           <div class="logo">
@@ -75,13 +66,13 @@
           </button>
         </nav>
       </div>
-    </header>
+    </header> -->
 
-     
+     <?php include_once 'Home-page-php/header.php';?>
 
     <!-- Floating Navigation -->
   
-   <div class="floating-nav">
+   
       <div class="floating-nav-item active" data-target="hero">
         <span class="floating-nav-tooltip">Home</span>
       </div>
@@ -100,11 +91,14 @@
       <div class="floating-nav-item" data-target="contact">
         <span class="floating-nav-tooltip">Contact</span>
       </div>
-    </div>
-
+    </div> -->
+  <?php include_once 'Home-page-php/Floating_Navigation.php';?>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section">
+     <?php include_once 'Home-page-php/hero.php';?>
+
+    
+
       <div class="container">
         <div class="hero-content">
           <div class="hero-text animate-fade-in">
@@ -208,10 +202,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- About Section -->
-     <section id="about" class="about section">
+     <?php include_once 'Home-page-php/About.php';?>
+    
       <div class="container">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
@@ -317,10 +312,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Experience Section -->
-       <section id="experience" class="experience section">
+     <?php include_once 'Home-page-php/Experience.php';?>
+      
       <div class="container">
         <h2 class="section-title">Professional Experience</h2>
         <div class="experience-list">
@@ -430,11 +426,12 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
 
     <!-- Skills Section -->
-    <section id="skills" class="skills section">
+     <?php include_once 'Home-page-php/Skills.php';?>
+    
       <div class="container">
         <h2 class="section-title">Skills & Expertise</h2>
         <div class="skills-grid">
@@ -540,10 +537,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Services Section -->
-       <section id="services" class="services section">
+     <?php include_once 'Home-page-php/Services.php';?>
+      
       <div class="container">
         <h2 class="section-title">My Services</h2>
         <div class="skills-grid">
@@ -644,10 +642,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
+     <?php include_once 'Home-page-php/Contact.php';?>
+    
       <div class="container">
         <h2 class="section-title">Get in Touch</h2>
         <div class="contact-container">
@@ -761,14 +760,15 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
-    <footer>
+     <?php include_once 'Home-page-php/Footer.php';?>
+    
       <div class="container">
         <p>&copy; 2025 Ali Hossain. All rights reserved.</p>
       </div>
-    </footer>
+    </footer> -->
 
     <script>
       // Theme Toggle
