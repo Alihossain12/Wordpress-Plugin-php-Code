@@ -1,4 +1,4 @@
- <section id="contact" class="contact section">
+  <section id="contact" class="contact section">
       <div class="container">
         <h2 class="section-title">Get in Touch</h2>
         <div class="contact-container">
