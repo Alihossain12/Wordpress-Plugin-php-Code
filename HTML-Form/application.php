@@ -1,8 +1,8 @@
 <?php
 
 echo "<pre>";
-//  print_r ($_GET);
-//  print_r ($_POST);
+ print_r ($_GET);
+ print_r ($_POST);
 
 echo "</pre>";
 
@@ -11,15 +11,15 @@ echo "</pre>";
 //     echo "Please fill out all fields";
 // } exit;
 
-// $name = !empty($_POST["name"]) ? $_POST["name"] :"";
-// $phone = !empty($_POST["phone"]) ? $_POST["phone"] :"";
-// $email = !empty($_POST["email"]) ? $_POST["email"] :"";
-// $date = !empty($_POST["date"]) ? $_POST["date"] :"";
-// $time = !empty($_POST["time"]) ? $_POST["time"] :"";
-// $area = !empty($_POST["area"]) ? $_POST["area"] :"";
-// $city = !empty($_POST["city"]) ? $_POST["city"] :"";
-// $state = !empty($_POST["state"]) ? $_POST["state"] :"";
-// $post_code = !empty($_POST["post-code"]) ? $_POST[  "post-code"] :"";
+$name = !empty($_POST["name"]) ? $_POST["name"] :"";
+$phone = !empty($_POST["phone"]) ? $_POST["phone"] :"";
+$email = !empty($_POST["email"]) ? $_POST["email"] :"";
+$date = !empty($_POST["date"]) ? $_POST["date"] :"";
+$time = !empty($_POST["time"]) ? $_POST["time"] :"";
+$area = !empty($_POST["area"]) ? $_POST["area"] :"";
+$city = !empty($_POST["city"]) ? $_POST["city"] :"";
+$state = !empty($_POST["state"]) ? $_POST["state"] :"";
+$post_code = !empty($_POST["post-code"]) ? $_POST[  "post-code"] :"";
 
 
 
