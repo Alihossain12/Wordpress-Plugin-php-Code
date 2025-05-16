@@ -2,7 +2,7 @@
 <html lang="en">
 
  <!-- // head -->
-<?php include('includes-php/head.php');?>
+<?php include_once 'includes-php/head.php';?>
 
 
 
@@ -10,57 +10,58 @@
      
       <!-- Spinner Start -->
 
-     <?php include('includes-php/spinner.php');?>
+     <?php include_once 'includes-php/spinner.php';?>
+     
         <!-- Spinner End -->
 
 
         <!-- Navbar Start -->
-    <?php include('includes-php/navbar.php');?>
+    <?php include_once 'includes-php/navbar.php';?>
         <!-- Navbar End -->
 
 
         <!-- Header Start -->
-    <?php include('includes-php/header.php');?>
+    <?php include_once 'includes-php/header.php';?>
         <!-- Header End -->
 
 
         <!-- Search Start -->
-    <?php include('includes-php/search.php');?>
+    <?php include_once 'includes-php/search.php';?>
         <!-- Search End -->
 
 
         <!-- Category Start -->
-    <?php include('includes-php/category.php');?>
+    <?php include_once 'includes-php/category.php';?>
         <!-- Category End -->
 
 
         <!-- About Start -->
-    <?php include('includes-php/home-about.php');?>
+    <?php include_once 'includes-php/home-about.php';?>
         <!-- About End -->
 
 
         <!-- Property List Start -->
-    <?php include('includes-php/Property.php');?>
+    <?php include_once 'includes-php/Property.php';?>
         <!-- Property List End -->
 
 
         <!-- Call to Action Start -->
-    <?php include('includes-php/Call-to-Action.php');?>     
+    <?php include_once 'includes-php/Call-to-Action.php';?>     
         <!-- Call to Action End -->
 
 
         <!-- Team Start -->
-    <?php include('includes-php/Team.php');?>
+    <?php include_once 'includes-php/Team.php';?>
         <!-- Team End -->
 
 
         <!-- Testimonial Start -->
-    <?php include('includes-php/testimonial.php');?>
+    <?php include_once 'includes-php/testimonial.php';?>
         <!-- Testimonial End -->
         
 
         <!-- Footer Start -->
-    <?php include('includes-php/footer.php');?>
+    <?php include_once 'includes-php/footer.php';?>
         <!-- Footer End -->
 
 
