@@ -21,7 +21,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $expiry_date = $_POST['expiry_date'];
     $batch_number = $_POST['batch_number'];
     $rack_number = $_POST['rack_number'];
+
+    $sql = "INSERT INTO medicines (name, category, manufacturer, price, quantity, expiry_date, batch_number, rack_number, added_date, time) 
+    VALUES ('$name', '$category', '$manufacturer', '$price', '$quantity', '$expiry_date', '$batch_number', '$rack_number', '$added_date', '$time')";  
+    
+    if ($conn->query($sql) === TRUE) {
+        header("Location: index.php?msg=added");
+        exit;
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,6 +45,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <?php include 'form.php';?>
  </body>
 </html>
-
 
 
