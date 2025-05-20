@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $batch_number = $_POST['batch_number'];
     $rack_number = $_POST['rack_number'];
     $added_date = $_POST['added_date'];
-    $time = date("Y-m-d H:i:s");
+    $images = $_FILES['images'];
 
 
     $category = $_POST['category'];
@@ -21,9 +21,48 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $expiry_date = $_POST['expiry_date'];
     $batch_number = $_POST['batch_number'];
     $rack_number = $_POST['rack_number'];
+   
 
-    $sql = "INSERT INTO medicines (name, category, manufacturer, price, quantity, expiry_date, batch_number, rack_number, added_date, time) 
-    VALUES ('$name', '$category', '$manufacturer', '$price', '$quantity', '$expiry_date', '$batch_number', '$rack_number', '$added_date', '$time')";  
+    $target_dir = "images/";
+    $target_file = $target_dir . basename($images["name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+    // Check if image file is a actual image or fake image
+    $check = getimagesize($images["tmp_name"]);
+    if($check !== false) {
+        $uploadOk = 1;
+    } else {
+        $uploadOk = 0;
+    }
+
+    // Check if file already exists
+    if (file_exists($target_file)) {
+        $uploadOk = 0;
+    }
+
+    // Check file size
+    if ($images["size"] > 500000) {
+        $uploadOk = 0;
+    }
+
+    // Allow certain file formats
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
+        $uploadOk = 0;
+    }
+
+    // Check if $uploadOk is set to 0 by an error
+    if ($uploadOk == 0) {
+        echo "Sorry, your file was not uploaded.";
+    // if everything is ok, try to upload file
+    } else {
+        if (move_uploaded_file($images["tmp_name"], $target_file)) {
+            $sql = "INSERT INTO medicines (name, category, manufacturer, price, quantity, expiry_date, batch_number, rack_number, added_date, images) 
+            VALUES ('$name', '$category', '$manufacturer', '$price', '$quantity', '$expiry_date', '$batch_number', '$rack_number', '$added_date', '$target_file')";  
+        } else {
+            echo "Sorry, there was an error uploading your file.";
+        }
+    }
     
     if ($conn->query($sql) === TRUE) {
         header("Location: index.php?msg=added");

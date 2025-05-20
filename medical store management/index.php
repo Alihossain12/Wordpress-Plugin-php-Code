@@ -28,7 +28,7 @@
 			<th>Batch_number</th>
 			<th>Rack_number</th>
 			<th>Added_date</th>
-			<th>Time</th>
+			<th>Images</th>
 		    <th>Actions</th>
         </tr>
         </thead>
@@ -48,11 +48,11 @@
             <td><?= $row['batch_number'] ?></td>
             <td><?= $row['rack_number'] ?></td>
             <td><?= $row['added_date'] ?></td>
-            <td><?= $row['time'] ?></td>
+            <td><img src="<?= $row['images'] ?>" width="100" height="100"></td>
             
             <td>
                 <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-warning">✏️ Edit</a>
-                <a href="delete.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">🗑️ Delete</a>
+                <a href="delete.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this medicine?')">🗑️ Delete</a>
             </td>
         </tr>
         <?php endwhile; ?>
