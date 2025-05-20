@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
 </head>
 <body>
+
+<style>a.btn.btn-sm.btn-warning {
+    margin: 11px 0px;
+}
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1835px;
+}
+
+
+</style>
+
 <div class="container mt-5">
     <div class="d-flex justify-content-between mb-3">
         <h2>Medical store Management</h2>
@@ -24,12 +35,12 @@
             <th>Manufacturer</th>
             <th>Price</th>
             <th>Quantity</th>
-            <th>Expiry_date</th>
-			<th>Batch_number</th>
-			<th>Rack_number</th>
-			<th>Added_date</th>
-			<th>Images</th>
-		    <th>Actions</th>
+            <th>Expiry Date</th>
+            <th>Batch Number</th>
+            <th>Rack Number</th>
+            <th>Added Date</th>
+            <th>Image</th>
+            <th>Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -49,7 +60,6 @@
             <td><?= $row['rack_number'] ?></td>
             <td><?= $row['added_date'] ?></td>
             <td><img src="<?= $row['images'] ?>" width="100" height="100"></td>
-            
             <td>
                 <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-warning">✏️ Edit</a>
                 <a href="delete.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this medicine?')">🗑️ Delete</a>
