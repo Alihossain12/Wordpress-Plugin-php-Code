@@ -3,11 +3,11 @@
 <html lang="en">
 <head>
     <?php
-    require_once  './config.php';
-    include_once  './includes/head.php';
+    require_once  'config.php';
+    include_once  'includes/head.php';
     ?>
     <?php
-        $sql = "SELECT * FROM `books` WHERE status = 0";
+        $sql = "SELECT * FROM `books` WHERE status = '0'";
         $result = mysqli_query($connection, $sql);
         $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
     ?>

@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <?php
-    require_once  './config.php';
-    include_once  './includes/head.php';
+   <?php
+    require_once  'config.php';
+    include_once  'includes/head.php';
     ?>
 
     <?php
@@ -68,6 +68,6 @@
       </div>
     </form>
   </div>
-  <?php include_once __DIR__ . '/footer.php'; ?>
+  <?php include_once  'includes/footer.php'; ?>
 </body>
 </html>
