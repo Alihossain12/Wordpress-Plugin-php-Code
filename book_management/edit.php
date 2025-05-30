@@ -6,11 +6,15 @@
     include_once  './includes/head.php';
     ?>
     <?php 
-        $id = $_GET['id'];
+        $id = $_POST['id'];
         $sql = "SELECT * from books WHERE id = $id";
         $result = mysqli_query($connection, $sql);
         $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
         $book = $data[0];
+
+
+
+ 
     ?>
     <?php
         $sql    = "SELECT * FROM `categories`";
