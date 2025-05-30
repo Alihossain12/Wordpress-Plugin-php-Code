@@ -6,8 +6,8 @@
 <html lang="en">
 <head>
     <?php
-    require_once  './config.php';
-    include_once  './includes/head.php';
+    require_once  'config.php';
+    include_once  'includes/head.php';
     ?>
     <?php 
         $id     = $_GET['id'];

@@ -7,7 +7,7 @@
     include_once  'includes/head.php';
     ?>
     <?php
-        $sql = "SELECT * FROM `books` WHERE status = '0'";
+        $sql = "SELECT * FROM `books` WHERE status = 0";
         $result = mysqli_query($connection, $sql);
         $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
     ?>
@@ -46,8 +46,7 @@
                             <td><?php echo $row['isbn'] ?></td>
                             <td><?php echo $row['category'] ?></td>
                             <td>
-                                <a href="view.php?id=<?php echo $row['id'] ?>" class="btn btn-sm btn-info">View</a>
-                                <a href="edit.php?id=<?php echo $row['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
+                                <a href="restore.php?id=<?php echo $row['id'] ?>" class="btn btn-sm btn-info">Restore</a>
                                 <a href="delete.php?id=<?php echo $row['id'] ?>" class="btn btn-sm btn-danger">Delete</a>
                             </td>
                         </tr>

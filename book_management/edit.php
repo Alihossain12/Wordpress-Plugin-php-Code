@@ -65,7 +65,7 @@
             <textarea name="description" class="form-control" rows="3"><?php echo $book['description'] ?></textarea></div>
         <div class="col-12">
             <label class="form-label">Cover Image URL</label>
-            <input name="cover_image_url" value="<?php echo $book['cover_image_url'] ?>" type="url" class="form-control">
+            <input name="cover_image_url" value="<?php echo $book['cover_image_url'] ?>" type="file" class="form-control">
         </div>
       </div>
       <div class="mt-4">

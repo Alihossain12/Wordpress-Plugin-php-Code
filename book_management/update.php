@@ -1,5 +1,3 @@
-
-
 <?php 
 
    
@@ -7,9 +5,7 @@
     require_once  './config.php';
     
     
-    
-
-
+ 
 // Get all data from form
 $id              = $_POST['id'];
 $book_name       = $_POST['book_name'];
@@ -21,7 +17,7 @@ $category        = $_POST['category'];
 $language        = $_POST['language'];
 $pages           = $_POST['pages'];
 $description     = $_POST['description'];
-$cover_image_url = $_POST['cover_image_url'];
+$cover_image_url = $_FILES['cover_image_url'];
 
 if( $is_connect ) {
     $sql = "UPDATE books 
