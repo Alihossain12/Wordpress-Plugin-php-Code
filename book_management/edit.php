@@ -2,25 +2,22 @@
 <html lang="en">
 <head>
     <?php
-    require_once  './config.php';
+    require_once  'config.php';
     include_once  './includes/head.php';
     ?>
     <?php 
-        $id = $_POST['id'];
+        $id = $_GET['id'];
         $sql = "SELECT * from books WHERE id = $id";
         $result = mysqli_query($connection, $sql);
         $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
         $book = $data[0];
-
-
-
- 
     ?>
     <?php
         $sql    = "SELECT * FROM `categories`";
         $result = mysqli_query($connection, $sql);
         $categories   = mysqli_fetch_all($result, MYSQLI_ASSOC);
     ?>
+
 </head>
 <body class="bg-light">
   <div class="container py-5">
