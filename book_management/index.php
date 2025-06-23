@@ -3,9 +3,23 @@
 <html lang="en">
 <head>
     <?php
+    session_start();
+
     require_once  'config.php';
     include_once  'includes/head.php';
+
+//      $_SECTION['user_id'] = 5;
+
+//      // Set a cookie that lasts 1 day
+// setcookie("user", "Sakibul", time() + 86400, "/");
+
+// // Access the cookie
+// if(isset($_COOKIE["user"])) {
+//     echo "Welcome back, " . $_COOKIE["user"];
+// }
+
     ?>
+    
     <?php
         //$sql = "SELECT * FROM `books` WHERE status != 0";
          $sql    = "SELECT books.*, categories.name AS category_name FROM `books` JOIN categories ON books.category = categories.id  WHERE status != 0";
@@ -23,6 +37,7 @@
         <a href="trash.php" class="btn btn-danger"> Trash</a>
         <a href="index.php" class="btn btn-primary"> All Books</a>
       </div>
+      
     </div>
     <table class="table table-hover table-bordered bg-white shadow-sm">
       <thead class="table-light">

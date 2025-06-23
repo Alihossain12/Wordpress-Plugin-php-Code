@@ -34,7 +34,7 @@
           <p><strong>Language:</strong> <?php echo $book['language'] ?></p>
           <p><strong>Pages:</strong> <?php echo $book['pages'] ?></p>
           <p><strong>Description:</strong> <?php echo $book['description'] ?></p>
-          <a href="/" class="btn btn-secondary mt-3">← Back to List</a>
+          <a href="/index.php" class="btn btn-secondary mt-3">← Back to List</a>
         </div>
       </div>
     </div>
